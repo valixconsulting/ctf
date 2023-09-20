@@ -2,7 +2,7 @@
 ![](./public/social-preview-image.png)
 An interactive Ethereum-based platform for mastering offensive security in Smart Contracts.
 
-🚀 [CTF is now Live!](https://valixconsulting.github.io/ctf/){:target="_blank"}
+🚀 [CTF is now Live!](https://valixconsulting.github.io/ctf/)
 
 ## Getting started
 
