@@ -1,9 +1,9 @@
 {
-  "name": "ctf-playground-web",
+  "name": "ctf",
   "description": "Learn to adopt the offensive mindset to master security in smart contracts.",
   "version": "1.0.0",
   "author": "Valix Audit Team",
-  "homepage": "https://valixconsulting.github.io/ctf-playground-draft",
+  "homepage": "https://valixconsulting.github.io/ctf",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

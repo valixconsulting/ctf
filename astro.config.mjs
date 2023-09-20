@@ -10,5 +10,5 @@ export default defineConfig({
     applyBaseStyles: false,
   })],
   site: 'https://valixconsulting.github.io',
-  base: '/ctf-playground-draft',
+  base: '/ctf',
 })
