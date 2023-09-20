@@ -1,0 +1,78 @@
+---
+import Navigation from '../components/Navigation.astro'
+import { SkipLinks } from 'accessible-astro-components'
+import { Icon } from 'astro-icon'
+import { Link } from 'astro-link'
+---
+
+<header>
+  <SkipLinks />
+  <Navigation>
+    <li class="menu-item">
+      <Link href="/">Home</Link>
+    </li>
+    <li class="menu-item has-dropdown">
+      <button aria-haspopup="true" aria-expanded="false">Challenges</button>
+      <ul class="dropdown-menu">
+        <li class="submenu-item">
+          <Link href="/challenges/extra-bank/">#1 ExtrLink Bank</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/lock-pool/">#2 Lock Pool</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/nft-whitelist/">#3 NFT Whitelist</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/poor-boy/">#4 Poor Boy</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/the-collector/">#5 The Collector</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/bullied-boy/">#6 The Bullied Boy</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/the-secret-source/">#7 The Secret Source</Link>
+        </li>
+        <li class="submenu-item">
+          <Link href="/challenges/trick-or-thieve/">#8 Trick or Thieve</Link>
+        </li>
+      </ul>
+    </li>
+    <!-- <li class="menu-item">
+      <Link href="https://Linkccessible-astro.dev" title="external link" rel="external noopener noreferrer">External Link</Link>
+    </li> -->
+    <li class="menu-item type-icon">
+      <Link href={import.meta.env.PUBLIC_GITHUB_REPO} title="Go to the GitHub page">
+        <Icon pack="ion" name="logo-github" />
+      </Link>
+    </li>
+  </Navigation>
+</header>
+
+<style lang="scss" is:global>
+  @use '../assets/scss/base/outline' as *;
+
+  header {
+    .type-icon a {
+      display: block;
+
+      [astro-icon] {
+        margin-top: -4px;
+        width: 30px;
+
+        path {
+          fill: var(--action-color);
+          transition: fill 0.2s ease-in-out;
+        }
+      }
+
+      &:hover {
+        [astro-icon] path {
+          fill: var(--action-color-state);
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import ContentMedia from '../components/Hero.astro'
+import Counter from '../components/Hero.astro'
+---
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-20">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Challenges</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:file-code" title="Extra Bank" link="/challenges/extra-bank/">
+          Something have left behind, that could turn the bank into a TORNADO of chaos!
+        </Feature>
+        <Feature icon="mdi:file-code" title="Lock Pool" link="/challenges/lock-pool/">
+          Could you retrieve all of the locked tokens from the lock pool?
+        </Feature>
+        <Feature icon="mdi:file-code" title="NFT Whitelist" link="/challenges/nft-whitelist/">
+          A new NFT Market has been opened!, who is in the whitelists can claim the NFT without spending any ETH.
+        </Feature>
+        <Feature icon="mdi:file-code" title="Poor Boy" link="/challenges/poor-boy/">
+          A young guy has got very little money, can't use any services, but there's still a tiny bit of hope.
+        </Feature>
+        <Feature icon="mdi:file-code" title="The Collector" link="/challenges/the-collector/">
+          The Collector NFT Market has been opened!. The more you own, the cheaper you can buy.
+        </Feature>
+        <Feature icon="mdi:file-code" title="The Bullied Boy" link="/challenges/bullied-boy/">
+          The bullied boy want to ensure that nobody else could taste victory, not even the class teacher!
+        </Feature>
+        <Feature icon="mdi:file-code" title="The Secret Source" link="/challenges/the-secret-source/">
+          Whoever guesses correctly the secret source will win the 1 million tokens reward.
+        </Feature>
+        <Feature icon="mdi:file-code" title="Trick or Thieve" link="/challenges/trick-or-thieve/">
+          The new marketplace has been launched for just a minute, Could you retrieve the token by purchase nothing?
+        </Feature>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>

@@ -1,0 +1,73 @@
+---
+import { Icon } from 'astro-icon'
+import { Image } from "astro:assets"
+import flag_white from "../assets/img/flag-white.svg"
+import flag_dark from "../assets/img/flag-dark.svg"
+
+const README_URL = import.meta.env.PUBLIC_GITHUB_REPO+"/blob/main/README.md"
+---
+
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
+          <slot><span class="text-gradient">CTF</span> Playground</slot>
+        </h1>
+        <h3 class="!text-gray-500 slogan">
+          <slot>Learn to adopt the offensive mindset to master security in smart contracts.</slot>
+        </h3>
+        <div class="flex flex-col gap-3 min-[500px]:flex-row">
+          <a class="button has-icon" href={import.meta.env.PUBLIC_GITHUB_REPO}>
+            <Icon pack="ion" name="star-outline" />
+            Star on GitHub
+          </a>
+          <a
+            class="button has-icon color-secondary"
+            href={README_URL}
+          >
+            <Icon pack="ion" name="bookmark-outline" />
+            Read the Docs
+          </a>
+        </div>
+      </div>
+      <div class="hidden lg:block ">
+        <Image class="flag-white" src={flag_white} alt="CTF" width="500" height="500" />
+        <Image class="flag-dark" src={flag_dark} alt="CTF" width="500" height="500" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss" is:global>
+  .flag-white {
+    display: grid;
+  }
+  .flag-dark {
+    display: none;
+  }
+  .darkmode .flag-white {
+    display: none;
+  }
+  .darkmode .flag-dark {
+    display: grid;
+  }
+
+  .text-gradient {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-500));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  :global(.darkmode .slogan) {
+    color: #aaaaaa !important;
+  }
+</style>
