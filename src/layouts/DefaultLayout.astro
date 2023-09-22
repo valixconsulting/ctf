@@ -5,13 +5,15 @@ import SiteMeta from '../components/SiteMeta.astro'
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 
-const preview_image = import.meta.env.BASE_URL+"/social-preview-image.png"
+const og_preview_image = import.meta.env.BASE_URL+"/social-preview-image.png"
+const twitter_preview_image = import.meta.env.BASE_URL+"/twitter-preview-image.png"
 
 const {
   title = 'Valix CTF Playground',
   description = 'Learn to adopt the offensive mindset to master security in smart contracts.',
   url,
-  image = preview_image,
+  og_image = og_preview_image,
+  twitter_image = twitter_preview_image,
   author = 'Valix Audit Team',
 } = Astro.props
 ---

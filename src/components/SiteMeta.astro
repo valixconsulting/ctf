@@ -1,5 +1,5 @@
 ---
-const { title, description, url, image, author } = Astro.props
+const { title, description, url, og_image, twitter_preview_image, author } = Astro.props
 
 let subtitle = 'Valix CTF Playground'
 ---
@@ -14,7 +14,7 @@ let subtitle = 'Valix CTF Playground'
 <meta property="og:description" content={description} />
 <meta property="og:type" content="website" />
 <meta property="og:url" content={url} />
-<meta property="og:image" content={image} />
+<meta property="og:image" content={og_image} />
 
 <!-- twitter card -->
 <meta name="twitter:card" content="summary_large_image">
@@ -22,7 +22,7 @@ let subtitle = 'Valix CTF Playground'
 <meta name="twitter:title" content={`${title} - ${subtitle}`} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:url" content={url} />
-<meta name="twitter:image" content={image} />
+<meta name="twitter:image" content={twitter_preview_image} />
 
 <!-- page title -->
 <title>{title} - {subtitle}</title>
